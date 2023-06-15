@@ -1,5 +1,7 @@
 let travelling_Images=["https://wallpaperset.com/w/full/8/1/7/343024.jpg","https://wallpapercave.com/wp/wp2587569.jpg","https://cdn.wallpapersafari.com/13/86/GaUv3x.jpg"];
 let travelling_Images1=["https://cdn.wallpapersafari.com/56/27/MXkow9.jpg","https://i.pinimg.com/originals/86/54/6b/86546b637a863933b67769c2403fc757.jpg","https://cdn.wallpapersafari.com/12/26/aeZoiF.jpg"];
+
+
 let header=document.getElementById("Header");
 let k=0;
 let j=0;
@@ -39,6 +41,9 @@ if(window.innerWidth<800){
         },2000);
     }
 }
+
+
+
 let popular_places_to_visit=[{
     id:1,
     image:"https://www.tourmyindia.com/packages-tour-india/image/rajasthan-tour-packages.webp",
