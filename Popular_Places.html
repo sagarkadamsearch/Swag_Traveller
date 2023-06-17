@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {
+            color: orange;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            background-color: #FEFEFE;
+        }
+        #Header{
+            background-image: url("https://i.postimg.cc/tgB0GtX1/Screenshot-2023-06-16-142427.png");
+            height: 500px;
+            width: 100%;
+        }
+        .navbar{
+            display: flex;
+            justify-content:space-evenly ;
+            margin-top: 0px;
+            background-color: black;
+        }
+        .navbar>a:nth-child(1){
+           font-size: 25px;
+           color:white; 
+           text-decoration: none;
+        }
+        .navbar>div:nth-child(2){
+            font-size: 25px;
+            margin-top: 0px;
+            display: flex;
+            gap: 20px;
+
+        }
+        .navbar>div:nth-child(2)>a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar>div:nth-child(3){
+            display: flex;
+            gap: 20px;
+        }
+        .navbar>div:nth-child(3)>img{
+            width: 40px;
+            height: 40px;
+        }
+        .navbar>button{
+            font-size: 20px;
+            margin-top: 2px;
+            border-radius: 40px;
+            height: 40px;
+            width: 100px;
+            background-color:#43A1FF;
+            border: 0px;
+            color: white;
+        }
+        hr{
+            margin-top: 0px;
+        }
+        #solgan{
+            color:white;
+            text-align: center;
+            margin-top: 80px;
+            animation: myanimation 5s infinite;
+            text-decoration: underline;
+        }
+        @keyframes myanimation {
+  0% {color: red;}
+  25%{color:yellow;}
+  50%{color:aqua;}
+  75%{color:orange;}
+  100%{color: darkviolet;}
+}
+
+
+     #table{
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+          grid-template-columns: repeat(4,23%);
+          row-gap: 17px;
+          justify-content: space-evenly;
+          text-align: center;
+        }
+        .maintable>div:nth-child(1){
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            margin-top: 20px;
+            text-decoration:  underline;
+            cursor: pointer;
+        }
+        #table>div{
+            /* border: 1px solid black; */
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            cursor: pointer;   
+        }
+        #table>div>img{
+            width: 100%;
+            height: 300px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;    
+        }
+        #day_rating{
+          display: flex;
+          text-align: center;
+          align-items: center;
+          gap: 20px;
+          justify-content: space-between;
+          
+        }
+        #rating{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+            margin-right: 20px;
+        }
+        #table>div>div:last-child{
+            background-color: lawngreen;
+            width:fit-content;
+            text-align: center;
+            margin: auto;
+        }
+        #table>div>h3{
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+        #table>div>button:last-child{
+            border: 1px solid orange;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            color:orange;
+            font-weight: bold;
+            background-color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        #table>div>button:last-child:hover{
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+ <!-- Container Div start -->
+  <div id="container">
+    <!-- Header Part Start -->
+      <div id="Header">
+     <!-- Navbar start -->
+      <div class="navbar">
+        <a href=""><span>Swag Traveller</span></a>
+        <div>
+            <a href=""><span>Home</span></a>
+            <a href=""><span>Discover</span></a>
+            <a href=""><span>Locations</span></a>
+            <a href=""><span>About Us</span></a>
+            <a href=""><span>Support</span></a>
+        </div>
+        <div>
+            <img src="https://drive.google.com/uc?export=view&id=1k0NJTcGVzF-e22sNLIiPbIQ9neIecJZj" alt="">
+            <img src="https://drive.google.com/uc?export=view&id=190c9IGo4vIKuSyBzat6konHG_qWo0hZq" alt="">
+        </div>
+        <button>
+           Sign up 
+        </button>
+      </div>
+      <hr>
+      <div id="solgan">
+        <h1>SWAG TRAVELLER</h1>
+        <h2>Helping People Make Memories</h2>
+      </div>
+     <!-- Navbar end -->
+      </div>
+     <!-- Header Part Start -->
+    <div id="table">
+       
+    </div>
+
+  </div>
+ <!-- Container Div Over -->
+</body>
+</html>
+<script src="./Popular_Places.js"></script>
