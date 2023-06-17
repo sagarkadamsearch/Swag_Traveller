@@ -1,49 +1,4 @@
-let travelling_Images=["https://wallpaperset.com/w/full/8/1/7/343024.jpg","https://wallpapercave.com/wp/wp2587569.jpg","https://cdn.wallpapersafari.com/13/86/GaUv3x.jpg"];
-let travelling_Images1=["https://cdn.wallpapersafari.com/56/27/MXkow9.jpg","https://i.pinimg.com/originals/86/54/6b/86546b637a863933b67769c2403fc757.jpg","https://cdn.wallpapersafari.com/12/26/aeZoiF.jpg"];
-
-
-let header=document.getElementById("Header");
-let k=0;
-let j=0;
-let mediaquery=window.matchMedia(`(min-width:400px)`);
-let id;
-let id1;
-
-window.addEventListener('resize', checkMediaQuery);
-
-function checkMediaQuery(){
-    clearInterval(id);
-    clearInterval(id1);
-
-if(window.innerWidth>800){
-header.style.height="500px";
-id=setInterval(function(){
-    if(k>=travelling_Images.length){
-        k=0;
-    }
-    header.style.backgroundImage=`url(${travelling_Images[k]})`;
-    k++;
-    
-    },2000);
-}
-
-if(window.innerWidth<800){
-    // header.style.backgroundImage=`url("https://i.pinimg.com/originals/86/54/6b/86546b637a863933b67769c2403fc757.jpg")`;
-    header.style.height="600px";
-    console.log("hi");  
-    id1=setInterval(function(){
-        if(j>=travelling_Images1.length){
-            j=0;
-        }
-        header.style.backgroundImage=`url(${travelling_Images1[j]})`;
-        j++;
-        
-        },2000);
-    }
-}
-
-
-
+let table = document.getElementById("table");
 let popular_places_to_visit=[{
     id:1,
     image:"https://www.tourmyindia.com/packages-tour-india/image/rajasthan-tour-packages.webp",
@@ -117,14 +72,12 @@ let popular_places_to_visit=[{
 }                                                         
                              
 ]
+display(popular_places_to_visit);
+function display(data){
 
-let popular=document.getElementById("popular");
+data.forEach((e)=>{
 
-displayPopularPlaces(popular_places_to_visit);
-function displayPopularPlaces(data){
-console.log(data);
-    for(let i=0;i<8;i++){
-        let card=document.createElement("div");
+    let card=document.createElement("div");
         let image=document.createElement("img");
         let state=document.createElement("h3");
         let card2=document.createElement("div");
@@ -132,16 +85,17 @@ console.log(data);
         let rating=document.createElement("h4");
         let stars=document.createElement("div");
         let days=document.createElement("p");
-        let card4=document.createElement("div");
         let enquiry=document.createElement("button");
+        let heart=document.createElement("h1");
+        let card4=document.createElement("div");
 
-        image.src=data[i].image;
-        state.innerText=data[i].state;
-        rating.innerText=data[i].rating;
-        days.innerText=data[i].day;
+        image.src=e.image;
+        state.innerText=e.state;
+        rating.innerText=e.rating;
+        days.innerText=e.day;
         for(let j=1;j<=5;j++){
             let span=document.createElement("span");
-            if(j<=Number(data[i].rating)){
+            if(j<=Number(e.rating)){
                 span.setAttribute("class","fa fa-star checked");
             }
             else{
@@ -149,23 +103,17 @@ console.log(data);
             }
             stars.append(span);
         }
-        
+        heart.innerText="♡";   
         enquiry.innerText="Send Enquiry";
         card2.append(rating,stars);
         card3.append(days,card2);
-        card4.append(state);
+        card4.append(enquiry,heart);
         card2.id="rating";
         card3.id="day_rating";
-        card.append(image,card3,card4,enquiry);
-        popular.append(card);
-    }
+        card.append(image,card3,state,enquiry,card4);
+        table.append(card);
+
+
+})
 
 }
-
-
-let seeMore=document.getElementById("seeMore");
-
-seeMore.addEventListener("click",function(){
-
-    window.open("./Popular_Places.html");
-})
