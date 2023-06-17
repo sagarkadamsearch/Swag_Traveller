@@ -116,6 +116,7 @@ let popular_places_to_visit=[{
     day:"5 Nights-6 Days"
 }                                                         
                              
+}
 ]
 
 let popular=document.getElementById("popular");
@@ -133,6 +134,7 @@ console.log(data);
         let stars=document.createElement("div");
         let days=document.createElement("p");
         let card4=document.createElement("div");
+
         let enquiry=document.createElement("button");
 
         image.src=data[i].image;
@@ -169,3 +171,8 @@ seeMore.addEventListener("click",function(){
 
     window.open("./Popular_Places.html");
 })
+        card.append(image,card3,card4);
+        popular.append(card);
+    }
+
+}
