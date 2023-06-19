@@ -192,7 +192,7 @@ height: 500px;
             display: flex;
             gap: 10px;
             width: 400px;
-/*             border: 1px solid gold; */
+            /* border: 1px solid gold; */
         }
         .lowerHeader>div>div>h4{
         margin-bottom: 0px;
@@ -473,6 +473,49 @@ height: 500px;
  color:black;
 }
 
+#footer{
+    background-color: #3EA8FF;
+}
+#footer img{
+    width: 35px;
+    margin-left: 10px;
+}
+#newsLater{
+    text-align: center;
+padding-top: 40px;
+}
+#pack{ 
+ text-align: center;
+}
+#pack>button{
+    margin-left: 30px;
+    width: 170px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    color: #3EA8FF;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+
+}
+#pack>input{
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    color: #3EA8FF;
+    font-weight: bold;
+    font-size: large;
+   padding-left: 20px;
+}
+
+#f123{
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+}
 
     @media screen and (min-width:400px) and (max-width:800px){
         #Header{
@@ -673,8 +716,20 @@ height: 500px;
  </div>
 </div>
 
+<div id="footer">
+    <h1 id="newsLater">Subscribe Our Newsletter</h1>
+    <div id="pack">
+        <input type="text" name="email" id="email" placeholder="Enter your E-mail Id">
+        <button id="subscribe">Subscribe</button>
+    </div>
+    <hr>
+    <div id="f123">
+    <h3>FOLLOW US ON</h3>
+    <img src="https://imagepng.org/wp-content/uploads/2018/08/twitter-icone.png" alt="Error">
+   <img src="https://logopng.com.br/logos/instagram-40.png" alt="">
+    </div>
+</div>
   
 </body>
 <script src="./Home.js"></script>
 </html>
-
