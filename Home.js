@@ -233,7 +233,7 @@ let seeMore=document.getElementById("seeMore");
 
 seeMore.addEventListener("click",function(){
 
-    window.open("./Popular_Places.html");
+    window.open("./Popular_Places.html","_self");
 })
 
 
