@@ -51,6 +51,7 @@ if(loggedIn==null){
     logOutBtn.style.display="none";
 }
 else{
+    console.log(JSON.parse(loggedIn),"hi");
     loggedIn=JSON.parse(loggedIn);
     logInBtn.style.display="none";
 }
@@ -276,7 +277,6 @@ e.preventDefault();
         if(userId.value==logData[i].id){
               idFlag=true;
             if(password.value==logData[i].password){
-                console.log("sucess");
                 passFlag=true;
                 idline.innerText="";
                 passline.innerText="";
@@ -298,7 +298,7 @@ e.preventDefault();
         passline.innerText="";
     }
    if(idFlag==true && passFlag==true){
-    localStorage.setItem("loggedIn",userId.value);
+    localStorage.setItem("loggedIn",JSON.stringify(userId.value));
     logInBtn.style.display="none";
     location.reload();
     closeForm();

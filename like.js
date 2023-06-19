@@ -150,7 +150,7 @@ login.addEventListener("submit",(e)=>{
                 
             }
         }
-    
+
         if(idFlag==false){
           idline.innerText="You have entered wrong user-id";
         }
@@ -158,7 +158,7 @@ login.addEventListener("submit",(e)=>{
             passline.innerText="You have entered wrong password";
         }
        if(idFlag==true && passFlag==true){
-        localStorage.setItem("loggedIn",userId.value);
+        localStorage.setItem("loggedIn",JSON.stringify(userId.value));
         logInBtn.style.display="none";
         location.reload();
         closeForm();

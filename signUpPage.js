@@ -28,10 +28,9 @@ signUpBtn.addEventListener("click",(e)=>{
     }
 
     data={
-        "id":inputId.value,
-        "password":inputPass.value
+        id:inputId.value,
+        password:inputPass.value
     }
-
     if(acCheckflag==false){
        logData.push(data);
        localStorage.setItem("logData",JSON.stringify(logData));
