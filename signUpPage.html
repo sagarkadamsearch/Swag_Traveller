@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #signUpDiv{
+            width: 300px;
+            background-color: aqua;
+            margin:auto;
+            margin-top: 200px;
+        }
+        #myform{
+            width: 100%;
+            margin-left: 10px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        #signUpDiv input{
+            width: 90%;
+            height: 30px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid silver;
+        }
+        hr{
+            width: 90%;
+            margin-left: 0px;
+            height: 1px;
+            background-color: orange;
+        }
+       
+        #createBtn{
+            width: 100px;
+            height: 30px;
+            background-color: greenyellow;
+            color: darkblue;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        #closeBtn{
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            color: darkblue;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+        #myform>h4{
+            color: red;
+        }
+
+        #profile{
+            display: block;
+            position: fixed;
+            margin-right: 100px;
+            margin-top: 0px;
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            padding-left: 10px;
+        }
+        #profile>button{
+            height: 20px;
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="signUpDiv">
+        <form action="" id="myform">
+            <h4 id="accountCheck"></h4>
+          <label for="">Enter unique Id</label>
+          <input type="text" required id="id">
+          <label for="">Enter strong Password</label>
+          <input type="text" required id="pass">
+          <hr>
+          <button type="submit" id="createBtn">Create</button>
+          <button id="closeBtn">Close</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./signUpPage.js">
+
+</script>
