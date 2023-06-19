@@ -11,7 +11,6 @@ let id1;
 
 window.addEventListener('resize', checkMediaQuery);
 window.addEventListener("load",checkMediaQuery);
-
 function checkMediaQuery(){
     clearInterval(id);
     clearInterval(id1);
@@ -330,4 +329,3 @@ function enquiry_openForm() {
     document.getElementById("my_enquiry-form").style.display = "none";
   }
 
-  

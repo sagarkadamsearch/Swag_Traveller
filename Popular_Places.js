@@ -262,4 +262,3 @@ function enquiry_openForm() {
     document.getElementById("my_enquiry-form").style.display = "none";
   }
 
-
